@@ -3,33 +3,104 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.NoSuchElementException;
 
 public class Oblig1 {
     private Oblig1() {}
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-        throw new UnsupportedOperationException();
+        if (a.length<1){
+            throw new NoSuchElementException("tabellen er tom");
+        }
+
+
+            for (int i=0;i<a.length-1;i++){
+
+                if(a[i]>a[i+1]){
+                    bytt(a,i,i+1);
+
+                }
+            }
+            return a[a.length-1];
+        }
+        /* i denne oppgaven jeg byttet plasser på i og i+1 hvis a[i] var
+         større enn a[i+1] og sonn ble siste element er den største
+         så lagde jeg en annen metode der tellet jeg hvor mange
+          ombytninger skjedde til vi fikk største element i den siste indexen
+
+         */
+    public static void bytt(int []a,int i,int j){
+        int temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+
     }
 
+
     public static int ombyttinger(int[] a) {
-        throw new UnsupportedOperationException();
+        if(a.length<1){
+            throw new NoSuchElementException("tabellen er tom");
+
+        }
+
+        int antal = 0;
+
+        for (int i = 0; i < a.length-1; i++){
+            if (a[i] >= a[i+1]){
+                bytt(a,i,i+1);
+                antal++;
+                }
+        }
+        return antal;
+
     }
+
+
+
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        throw new UnsupportedOperationException();
+        if(a.length<1){
+            throw new IllegalStateException("Arrayet er ikke sortert stigende!");
+        }
+       int verdi=0;
+       int teller=0;
+       for (int i=0;i<a.length;i++){
+           if (a[i]>=verdi){
+               if (a[i]!=verdi){
+                   teller++;
+               }
+           }
+          verdi=a[i];
+       }
+       return teller;
     }
 
     ///// Oppgave 3 //////////////////////////////////////
     public static int antallUlikeUsortert(int[] a) {
-        throw new UnsupportedOperationException();
+        if (a.length<1) {
+            throw new UnsupportedOperationException("arryet er tom");
+        }
+        int antal=a.length;
+        for (int i=0;i<a.length;i++){
+            for (int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    antal--;
+
+                }
+            }
+        }
+        return antal;
     }
 
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
-        throw new UnsupportedOperationException();
-    }
+
+            throw new UnsupportedOperationException();
+        }
+
+
 
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
