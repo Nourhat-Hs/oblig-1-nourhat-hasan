@@ -29,6 +29,9 @@ public class Oblig1 {
          så lagde jeg en annen metode der tellet jeg hvor mange
           ombytninger skjedde til vi fikk største element i den siste indexen
 
+          bytt metoden var brukt inni de andre to metodene
+          bytt metoden gjør at man kan bytte plass på to indexer
+
          */
     public static void bytt(int []a,int i,int j){
         int temp=a[i];
@@ -44,15 +47,15 @@ public class Oblig1 {
 
         }
 
-        int antal = 0;
+        int antall = 0;
 
         for (int i = 0; i < a.length-1; i++){
             if (a[i] >= a[i+1]){
                 bytt(a,i,i+1);
-                antal++;
+                antall++;
                 }
         }
-        return antal;
+        return antall;
 
     }
 
