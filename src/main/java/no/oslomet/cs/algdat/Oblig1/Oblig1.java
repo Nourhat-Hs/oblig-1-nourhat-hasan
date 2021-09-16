@@ -91,22 +91,28 @@ public class Oblig1 {
     }
 
     ///// Oppgave 3 //////////////////////////////////////
+/* for usortert array hadde jeg to for lokker inni
+hverandre og hver gang de hadde samme tal ble antal
+mindre
 
+ */
 
     public static int antallUlikeUsortert(int[] a) {
-        if (a.length<1) {
-            throw new UnsupportedOperationException("arryet er tom");
-        }
+
         int antal=a.length;
         for (int i=0;i<a.length;i++){
             for (int j=i+1;j<a.length;j++){
-                if(a[i]==a[j]){
+                if(a[j]==a[i]){
                     antal--;
-
+                    break;
                 }
+
             }
+
+
         }
         return antal;
+
     }
 
     ///// Oppgave 4 //////////////////////////////////////
