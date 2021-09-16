@@ -65,7 +65,7 @@ public class Oblig1 {
 
 
     ///// Oppgave 2 //////////////////////////////////////
-    /* her legget jeg verdi som var 0 og hver gang a[i]>verdi addet jeg på antal*/
+    /* her legget jeg verdi som var 0 og hver gang a[i]>verdi adder på antal*/
     public static int antallUlikeSortert(int[] a) {
         int verdi=0;
         int antal=0;
@@ -75,14 +75,14 @@ public class Oblig1 {
 
        for (int i=0;i<a.length;i++) {
            if (a[i] >= verdi) {
-               if (a[i]> verdi) {
+               if (a[i] !=verdi) {
                    antal++;
 
                }
                verdi = a[i];
            }
            else{
-               throw new IllegalStateException("");
+               throw new IllegalStateException("arayet må være sortert stigende");
 
            }
 
