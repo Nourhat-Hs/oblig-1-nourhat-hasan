@@ -127,8 +127,26 @@ mindre
 
 
     ///// Oppgave 5 //////////////////////////////////////
+    /*
+    jeg valgte siste element og begynte fra den og
+     hver gang bytta jeg den til den forige til vi kom til
+      første element så bytta jeg den til siste element
+    */
+    
     public static void rotasjon(char[] a) {
-        throw new UnsupportedOperationException();
+
+        if (a.length == 0){
+           return;
+
+        }
+        else if(a.length!=0){
+            char sist = a[a.length - 1];
+            for (int k = a.length - 1; k > 0; k--) {
+                a[k] = a[k - 1];
+            }
+            a[0] = sist;
+        }
+
     }
 
     ///// Oppgave 6 //////////////////////////////////////
