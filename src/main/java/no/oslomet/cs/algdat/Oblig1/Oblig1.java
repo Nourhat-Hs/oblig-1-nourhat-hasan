@@ -132,20 +132,20 @@ mindre
      hver gang bytta jeg den til den forige til vi kom til
       første element så bytta jeg den til siste element
     */
-    
+
     public static void rotasjon(char[] a) {
 
         if (a.length == 0){
            return;
 
         }
-        else if(a.length!=0){
+
             char sist = a[a.length - 1];
-            for (int k = a.length - 1; k > 0; k--) {
-                a[k] = a[k - 1];
+            for (int i = a.length - 1; i> 0; i--) {
+                a[i] = a[i - 1];
             }
             a[0] = sist;
-        }
+
 
     }
 
