@@ -49,6 +49,7 @@ public class Oblig1 {
 
         int antall = 0;
 
+
         for (int i = 0; i < a.length-1; i++){
             if (a[i] >= a[i+1]){
                 bytt(a,i,i+1);
@@ -62,25 +63,36 @@ public class Oblig1 {
 
 
 
+
     ///// Oppgave 2 //////////////////////////////////////
+    /* her legget jeg verdi som var 0 og hver gang a[i]>verdi addet jeg på antal*/
     public static int antallUlikeSortert(int[] a) {
+        int verdi=0;
+        int antal=0;
         if(a.length<1){
-            throw new IllegalStateException("Arrayet er ikke sortert stigende!");
+            return 0;
         }
-       int verdi=0;
-       int teller=0;
-       for (int i=0;i<a.length;i++){
-           if (a[i]>=verdi){
-               if (a[i]!=verdi){
-                   teller++;
+
+       for (int i=0;i<a.length;i++) {
+           if (a[i] >= verdi) {
+               if (a[i]> verdi) {
+                   antal++;
+
                }
+               verdi = a[i];
            }
-          verdi=a[i];
+           else{
+               throw new IllegalStateException("");
+
+           }
+
        }
-       return teller;
+       return antal;
     }
 
     ///// Oppgave 3 //////////////////////////////////////
+
+
     public static int antallUlikeUsortert(int[] a) {
         if (a.length<1) {
             throw new UnsupportedOperationException("arryet er tom");
