@@ -125,7 +125,18 @@ mindre
           //  throw new UnsupportedOperationException();
         int antal = 0;
 
-      
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 != 0) { // Hvis resten av a[i] ikke lik 0 så er den oddetall
+                bytt(a, antal, i); //hvis den er oddetall så kaller vi metoden bytt for å bytte teller med i osv
+                antal++; // vi øker teller med 1 hver gang if setningen fungerer
+            }
+        }
+        if (antal == 0 || antal== a.length) { // hvis if setningen ble aldre kjørt (0 ganger) det betyr at
+            quickSort(a);//tabellen har bare partall, så funker quickSort automatisk å sortere tabellen
+        } else { // samme for oddetall, hvis if setning ble kjørt 10 ganger, det betyr at tabellen har bare oddetall
+            kvikksortering(a, 0, antal);//hvis ikke, da kvikksortering kjøres å sortere oddetallene og partallene
+            kvikksortering(a, antal, a.length);
+        }
 
 
     }
