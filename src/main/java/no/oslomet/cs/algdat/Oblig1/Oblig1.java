@@ -216,8 +216,19 @@ mindre
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-        throw new UnsupportedOperationException();
+        int k = Math.min(s.length(), t.length());
+        StringBuilder builder = new StringBuilder();
+
+        for (int i =0; i<k; i++){
+            builder.append(s.charAt(i)).append(t.charAt(i));
+        }
+       builder.append(s.substring(k)).append(t.substring(k));
+
+        return builder.toString();
+
+
     }
+
 
     /// 7b)
     public static String flett(String... s) {
