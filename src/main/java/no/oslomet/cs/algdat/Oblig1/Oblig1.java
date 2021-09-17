@@ -232,8 +232,28 @@ mindre
 
     /// 7b)
     public static String flett(String... s) {
-        throw new UnsupportedOperationException();
+        int antal = 0;
+        StringBuilder builder = new StringBuilder();
+
+        for (String value : s) {
+            if (value.length() > antal) {
+               antal = value.length();
+            }
+        }
+
+        for (int i=0; i< antal; i++){
+            for (String j:s){
+                if (j.length()>i){
+                    builder.append(j,i, i+1);
+                }
+            }
+
+        }
+
+        return builder.toString();
     }
+
+    
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
