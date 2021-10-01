@@ -253,7 +253,7 @@ mindre
         return builder.toString();
     }
 
-    
+
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
