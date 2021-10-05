@@ -1,0 +1,4 @@
+no/oslomet/cs/algdat/Oblig1/Oblig1UnitTest.java
+ no.oslomet.cs.algdat.Oblig1.Oblig1UnitTest
+no/oslomet/cs/algdat/Oblig1/Oblig1Test.java
+ no.oslomet.cs.algdat.Oblig1.Oblig1Test

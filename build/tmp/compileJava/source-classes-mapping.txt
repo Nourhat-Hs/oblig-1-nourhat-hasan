@@ -1,0 +1,2 @@
+no/oslomet/cs/algdat/Oblig1/Oblig1.java
+ no.oslomet.cs.algdat.Oblig1.Oblig1
